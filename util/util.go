@@ -30,3 +30,14 @@ func GenArrRandom(n int) []int {
 	}
 	return arr
 }
+
+func MakeSquareWithValue(m int, n int, value int) [][]int {
+	arr := make([][]int, m)
+	for i := 0; i < m; i++ {
+		arr[i] = make([]int, n)
+		for j := 0; j < n; j++ {
+			arr[i][j] = value
+		}
+	}
+	return arr
+}
