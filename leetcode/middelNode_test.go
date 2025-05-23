@@ -72,3 +72,35 @@ func TestMinCostClimbingStairs2(t *testing.T) {
 	ans := MinCostClimbingStairs(cost)
 	require.Equal(t, ans, 1)
 }
+
+func TestFindContentChildren(t *testing.T) {
+	g := []int{1, 2, 3}
+	s := []int{1, 1}
+	ans := findContentChildren(g, s)
+	require.Equal(t, ans, 1)
+}
+
+func TestShouldEqual(t *testing.T) {
+	arr1 := []int{2, 2, 2, 2, 2, 1}
+	arr1 = shouldNoEqual(arr1)
+	require.Equal(t, arr1, []int{2, 1})
+	arr2 := []int{1, 2, 2, 2, 2, 2}
+	arr2 = shouldNoEqual(arr2)
+	require.Equal(t, arr2, []int{1, 2})
+	arr3 := []int{2, 2, 2, 2, 2, 2}
+	arr3 = shouldNoEqual(arr3)
+	require.Equal(t, arr3, []int{2})
+}
+
+func TestDailyTemperatures(t *testing.T) {
+	arr := []int{73, 74, 75, 71, 69, 72, 76, 73}
+	ans := dailyTemperatures(arr)
+	require.Equal(t, ans, []int{1, 1, 4, 2, 1, 1, 0, 0})
+}
+
+func TestNextGreaterElement(t *testing.T) {
+	nums1 := []int{2, 4}
+	nums2 := []int{1, 2, 3, 4}
+	ans := nextGreaterElement(nums1, nums2)
+	require.Equal(t, ans, []int{3, -1})
+}
